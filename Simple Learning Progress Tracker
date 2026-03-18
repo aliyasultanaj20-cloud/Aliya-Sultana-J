@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Simple Learning Progress Tracker</title>
+
+
+
+<style>
+
+Body{
+
+Font-family: Arial;
+
+Background-color:#f2f2f2;
+
+Text-align:center;
+
+}
+
+
+
+.container{
+
+Width:500px;
+
+Margin:auto;
+
+Background:white;
+
+Padding:20px;
+
+Border-radius:10px;
+
+Box-shadow:0 0 10px gray;
+
+}
+
+
+
+H1{
+
+Color:#333;
+
+}
+
+
+
+.activity{
+
+Border:1px solid #ccc;
+
+Padding:10px;
+
+Margin:10px;
+
+Border-radius:5px;
+
+}
+
+
+
+Button{
+
+Padding:6px 12px;
+
+Background-color:green;
+
+Color:white;
+
+Border:none;
+
+Border-radius:4px;
+
+Cursor:pointer;
+
+}
+
+
+
+Button:hover{
+
+Background-color:darkgreen;
+
+}
+
+
+
+.status{
+
+Font-weight:bold;
+
+Color:red;
+
+}
+
+
+
+.completed{
+
+Color:green;
+
+}
+
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class=”container”>
+
+
+
+<h1>Simple Learning Progress Tracker</h1>
+
+<p>Track your daily learning activities</p>
+
+
+
+<div class=”activity”>
+
+<p><b>HTML Basics</b></p>
+
+<p>Learn basic HTML tags</p>
+
+<p>Status: <span id=”s1” class=”status”>Pending</span></p>
+
+<button onclick=”completeTask(1)”>Mark Completed</button>
+
+</div>
+
+
+
+<div class=”activity”>
+
+<p><b>CSS Styling</b></p>
+
+<p>Learn basic CSS design</p>
+
+<p>Status: <span id=”s2” class=”status”>Pending</span></p>
+
+<button onclick=”completeTask(2)”>Mark Completed</button>
+
+</div>
+
+
+
+<div class=”activity”>
+
+<p><b>JavaScript Basics</b></p>
+
+<p>Understand JavaScript fundamentals</p>
+
+<p>Status: <span id=”s3” class=”status”>Pending</span></p>
+
+<button onclick=”completeTask(3)”>Mark Completed</button>
+
+</div>
+
+
+
+<div class=”activity”>
+
+<p><b>Build Mini Project</b></p>
+
+<p>Create a simple webpage project</p>
+
+<p>Status: <span id=”s4” class=”status”>Pending</span></p>
+
+<button onclick=”completeTask(4)”>Mark Completed</button>
+
+</div>
+
+
+
+<h3 id=”progress”>0 out of 4 activities completed</h3>
+
+
+
+</div>
+
+
+
+<script>
+
+
+
+Let completed = 0;
+
+Let total = 4;
+
+
+
+Function completeTask(num){
+
+
+
+Let status = document.getElementById(“s”+num);
+
+
+
+If(status.innerHTML === “Pending”){
+
+Status.innerHTML = “Completed”;
+
+Status.classList.remove(“status”);
+
+Status.classList.add(“completed”);
+
+
+
+Completed++;
+
+
+
+Document.getElementById(“progress”).innerHTML =
+
+Completed + “ out of “ + total + “ activities completed”;
+
+}
+
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
+
+
